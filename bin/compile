@@ -55,10 +55,12 @@ curl --silent --max-time 60 --location "$MCRYPT_URL" | tar xz
 
 cp $LP_DIR/apache.tar.gz .
 tar -xzf apache.tar.gz
+tar -xf apache.tar
 
 #PHP_URL="https://heroku-buildpack-php.s3.amazonaws.com/php-$PHP_VERSION""$heroku_rev"".tar.gz"
 cp $LP_DIR/php.tar.gz .
 tar -xzf php.tar.gz
+tar -xf php.tar
 echo "-----> Moving libphp5 ..."
 echo $PHP_PATH
 mv $PHP_PATH/.libs/libphp5.so $APACHE_PATH/modules
